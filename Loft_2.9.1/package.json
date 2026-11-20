@@ -1,0 +1,40 @@
+{
+  "name": "loft",
+  "productName": "Loft",
+  "version": "1.1.0",
+  "description": "Game launcher: library, store, profile, one account and one-click hosting",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "app.loft.launcher",
+    "productName": "Loft",
+    "asar": false,
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!docs/**",
+      "!.github/**",
+      "!LICENSE",
+      "!.gitignore"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "Loft-Setup.exe"
+    }
+  },
+  "author": "Loft"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "dead-harbor",
+  "name": "Dead Harbor",
+  "tagline": "Build a base. Survive the nights.",
+  "description": "A 3D zombie survival game. Scavenge the docks, build a shelter, drive abandoned cars and hold out until morning. Play alone or host a server for up to 20 friends.",
+  "version": "2.9.1",
+  "entry": "dead-harbor-3d.html",
+  "server": "server.js",
+  "color": "#c9482f",
+  "players": "Up to 20 players",
+  "art": "harbor",
+  "font": "Impact, 'Arial Narrow Bold', sans-serif",
+  "tags": [
+    "Survival",
+    "Multiplayer",
+    "3D"
+  ]
+}

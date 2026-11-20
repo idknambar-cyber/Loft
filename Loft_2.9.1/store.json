@@ -1,0 +1,15 @@
+{
+  "games": [
+    {
+      "id": "dead-harbor",
+      "name": "Dead Harbor",
+      "tagline": "Build a base. Survive the nights.",
+      "price": 0,
+      "tags": ["Survival", "Multiplayer", "3D"],
+      "color": "#c9482f",
+      "art": "harbor",
+      "font": "Impact, 'Arial Narrow Bold', sans-serif",
+      "status": "available"
+    }
+  ]
+}

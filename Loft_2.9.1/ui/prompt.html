@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Dockside</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<style>
+html,body{margin:0;height:100%;background:#17181b;color:#ece6d6;font:15px Bahnschrift,"Segoe UI",system-ui,sans-serif}
+body{display:flex;flex-direction:column;gap:12px;padding:20px 22px;box-sizing:border-box}
+#m{white-space:pre-wrap;line-height:1.45;max-height:112px;overflow:auto;color:#cfd6dc}
+input{padding:10px 12px;font:inherit;color:#ece6d6;background:#080c11;border:2px solid #2d3948;border-radius:3px}
+input:focus{outline:none;border-color:#e8b84a}
+.r{display:flex;gap:10px;justify-content:flex-end;margin-top:auto}
+button{padding:9px 22px;font-weight:600;font-size:15px;font-family:inherit;color:#ece6d6;background:#26384a;border:2px solid #06090c;border-radius:3px;cursor:pointer;box-shadow:inset 0 1px 0 #3d556c,0 2px 0 #05070a}
+button.p{background:linear-gradient(#e0603a,#b8432a);box-shadow:inset 0 1px 0 #f39a74,0 2px 0 #05070a}
+button:focus-visible{outline:2px solid #e8b84a;outline-offset:2px}
+</style></head><body>
+<div id="m"></div><input id="v" type="text" autocomplete="off" spellcheck="false">
+<div class="r"><button id="c">Cancel</button><button id="o" class="p">OK</button></div>
+<script src="prompt.js"></script></body></html>

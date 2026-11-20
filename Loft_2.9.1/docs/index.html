@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loft: Dead Harbor</title>
+<meta name="description" content="Dead Harbor is a free 3D zombie survival game. Build a base, survive the nights, play alone or with friends.">
+<meta name="color-scheme" content="dark">
+<style>
+:root{--bg:#0e0f11;--card:#17191d;--line:#2a2d33;--text:#ece9e2;--mute:#9aa0a8;--red:#c9482f;--red2:#e0603a;--teal:#4fb0a5;
+ --ui:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;--head:Impact,"Arial Narrow Bold",Bahnschrift,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--ui)}
+a{color:var(--teal)}
+.wrap{max-width:980px;margin:0 auto;padding:0 22px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+nav b{font:700 22px var(--head);letter-spacing:.04em}
+nav a{color:var(--mute);text-decoration:none;margin-left:22px;font-size:15px}
+nav a:hover{color:var(--text)}
+.hero{position:relative;padding:70px 0 80px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:130%;background:radial-gradient(ellipse at 50% 0,rgba(201,72,47,.35),transparent 62%),radial-gradient(ellipse at 20% 80%,rgba(79,176,165,.12),transparent 55%);z-index:-1}
+.hero h1{margin:0;font:400 clamp(48px,10vw,104px)/1 var(--head);letter-spacing:.03em;text-transform:uppercase;text-shadow:0 4px 0 #3a1710}
+.hero p.tag{margin:14px auto 30px;max-width:560px;font-size:clamp(17px,2.4vw,21px);color:#d9d4c8}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:12px;font-weight:700;font-size:18px;text-decoration:none;color:#fff;background:linear-gradient(var(--red2),var(--red));box-shadow:0 3px 0 #5a2012,0 10px 30px rgba(201,72,47,.35);transition:transform .1s,filter .15s}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{transform:translateY(2px)}
+.btn.alt{background:#23262b;box-shadow:0 3px 0 #101113;font-weight:600;font-size:16px;color:var(--text)}
+.row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.small{color:var(--mute);font-size:14px;margin-top:14px}
+h2{font:400 34px var(--head);letter-spacing:.03em;text-transform:uppercase;margin:0 0 22px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--mute);font-size:15px}
+.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--red);font-weight:700;margin-bottom:10px}
+.note{background:rgba(232,160,74,.1);border:1px solid rgba(232,160,74,.4);color:#f3d6a8;border-radius:12px;padding:14px 18px;font-size:15px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--mute);margin:10px 0 0}
+footer{padding:34px 0 50px;color:var(--mute);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+code{background:#23262b;padding:1px 7px;border-radius:6px;font-size:.92em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><b>LOFT</b><div><a href="#how">How it works</a><a href="#faq">Questions</a><a href="play/" id="navplay">Play in browser</a></div></nav>
+
+  <header class="hero">
+    <h1>Dead Harbor</h1>
+    <p class="tag">Build a base. Survive the nights. A free 3D zombie survival game you can play alone or with friends.</p>
+    <div class="row">
+      <a class="btn" data-dl href="#">Download for Windows</a>
+      <a class="btn alt" href="play/" id="heroplay">Try it in your browser</a>
+    </div>
+    <p class="small">Free. Windows 10 or 11.</p>
+  </header>
+</div>
+
+<section id="how"><div class="wrap">
+  <h2>How it works</h2>
+  <div class="grid">
+    <div class="card"><div class="num">1</div><h3>Install Loft</h3><p>Loft is the launcher. It keeps your account, your games and your worlds in one place. Everything runs on your own PC.</p></div>
+    <div class="card"><div class="num">2</div><h3>Make an account</h3><p>Pick a name and password. It is stored on your PC only, and the same login works on every server.</p></div>
+    <div class="card"><div class="num">3</div><h3>Play or host</h3><p>Play alone straight away, or press <b>Host a server</b>. Loft makes a link for your friends, no router settings and no server rental.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>What is in the game</h2>
+  <div class="grid">
+    <div class="card"><h3>Survive the nights</h3><p>Scavenge the docks by day, then hold out until morning while the zombies come.</p></div>
+    <div class="card"><h3>Build anything</h3><p>Walls, doors, chests, furnaces, turrets and gardens. Drive abandoned cars.</p></div>
+    <div class="card"><h3>Up to 20 players</h3><p>Host a world for friends, with PvP, spawn protection, a kill feed and loot drops you can switch on or off per world.</p></div>
+    <div class="card"><h3>Your worlds, your PC</h3><p>Every world you host is saved. Pick the one you want, start a new one, or import a world from a file.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Download</h2>
+  <div class="row" style="justify-content:flex-start">
+    <a class="btn" data-dl href="#">Download Loft for Windows</a>
+  </div>
+  <p class="small">The installer is not code-signed yet, so Windows may say "Windows protected your PC". Press <b>More info</b>, then <b>Run anyway</b>.</p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <details><summary>Who runs the servers?</summary><p>You do, when you want to. Nothing here runs all day. When you press <b>Host a server</b> in Loft, your PC runs the world and gives you a link. When you close Loft, the world is saved and the server stops. Your friends only need the link.</p></details>
+  <details><summary>Do my friends need to install anything?</summary><p>No. The link opens the game in their browser. They can also install Loft if they want to host their own worlds.</p></details>
+  <details><summary>Does it work offline?</summary><p>Yes. Loft, your account and singleplayer need no internet. Hosting works for people on the same Wi-Fi. Internet is only needed to install, and for friends who join from outside your home.</p></details>
+  <details><summary>Is it safe?</summary><p>Loft only talks to the internet to download one small helper that makes the join link. Servers never see your Loft password, they get a separate login made from it. Only join servers run by people you trust a bit.</p></details>
+  <details><summary>Something is broken</summary><p id="bug">Tell the person who sent you here, and say what you were doing when it happened.</p></details>
+</div></section>
+
+<footer><div class="wrap">Loft and Dead Harbor. Made for friends.</div></footer>
+
+<script>
+/* ===== Set these two lines, then upload this whole "site" folder to your host ===== */
+var REPO = 'YOUR-GITHUB-NAME/YOUR-REPO-NAME';   // for example 'sam/dead-harbor'
+var HAS_BROWSER_VERSION = false;                 // the browser copy would publish your game code, so it is off
+/* ==================================================================================== */
+(function(){
+  var url = 'https://github.com/' + REPO + '/releases/latest/download/Loft-Setup.exe';
+  document.querySelectorAll('[data-dl]').forEach(function(a){ a.href = url; });
+  if (!HAS_BROWSER_VERSION) ['navplay','heroplay'].forEach(function(id){ var e = document.getElementById(id); if (e) e.remove(); });
+  if (REPO.indexOf('YOUR-') === 0) document.title += ' (set REPO in index.html)';
+  var bug = document.getElementById('bug'); if (bug) bug.innerHTML = 'Open an issue at <a href="https://github.com/' + REPO + '/issues">github.com/' + REPO + '/issues</a>, or tell the person who sent you here what you were doing when it happened.';
+})();
+</script>
+</body>
+</html>

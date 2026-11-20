@@ -1,0 +1,25 @@
+const { contextBridge, ipcRenderer } = require('electron');
+contextBridge.exposeInMainWorld('loft', {
+  state: () => ipcRenderer.invoke('app:state'),
+  profile: () => ipcRenderer.invoke('profile:get'),
+  setColor: c => ipcRenderer.invoke('profile:color', c),
+  signup: (n, p, keep) => ipcRenderer.invoke('auth:signup', n, p, keep),
+  login: (n, p, keep) => ipcRenderer.invoke('auth:login', n, p, keep),
+  logout: () => ipcRenderer.invoke('auth:logout'),
+  gamePassword: gid => ipcRenderer.invoke('auth:password', gid),
+  launch: (gid, opts) => ipcRenderer.invoke('game:launch', gid, opts),
+  hostStart: (gid, o) => ipcRenderer.invoke('host:start', gid, o),
+  hostStop: () => ipcRenderer.invoke('host:stop'),
+  installHelper: () => ipcRenderer.invoke('host:cf'),
+  openFolder: (what, gid, wid) => ipcRenderer.invoke('shell:open', what, gid, wid),
+  worlds: gid => ipcRenderer.invoke('worlds:list', gid),
+  worldCreate: (gid, o) => ipcRenderer.invoke('worlds:create', gid, o),
+  worldImport: gid => ipcRenderer.invoke('worlds:import', gid),
+  worldExport: (gid, id) => ipcRenderer.invoke('worlds:export', gid, id),
+  worldRename: (gid, id, name) => ipcRenderer.invoke('worlds:rename', gid, id, name),
+  worldCfg: (gid, id, c) => ipcRenderer.invoke('worlds:cfg', gid, id, c),
+  worldDelete: (gid, id) => ipcRenderer.invoke('worlds:delete', gid, id),
+  copy: t => ipcRenderer.invoke('app:copy', t),
+  onHost: cb => ipcRenderer.on('host:update', (e, s) => cb(s)),
+  onNav: cb => ipcRenderer.on('nav', (e, t) => cb(t))
+});
